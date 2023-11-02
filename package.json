@@ -1,11 +1,22 @@
 {
-    "name": "server",
-    "version": "1.0.0",
-    "main": "server.cjs",
-    "scripts": {
-        "serve": "node server.cjs"
-    },
-    "dependencies": {
-        "express": "^4.18.2"
-    }
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.cjs",
+  "scripts": {
+    "serve": "node server.cjs"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "description": "Put the files in /public And the server will serve them at the port 3000",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afonsopc/static-web-server.git"
+  },
+  "author": "Afonso Coutinho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afonsopc/static-web-server/issues"
+  },
+  "homepage": "https://github.com/afonsopc/static-web-server#readme"
 }

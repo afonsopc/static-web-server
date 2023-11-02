@@ -1,9 +1,8 @@
-FROM node:slim
+FROM node:alpine
 
 WORKDIR /server
 COPY . .
 
-RUN npm install .
-RUN npm audit fix
+RUN npm ci --only=production
 
 CMD ["npm", "run", "serve"]
