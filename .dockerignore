@@ -1,6 +1,0 @@
-/Dockerfile
-/.git
-/.gitattributes
-/.gitignore
-/target
-/Cargo.lock
