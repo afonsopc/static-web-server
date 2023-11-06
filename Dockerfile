@@ -1,8 +1,22 @@
-FROM node:alpine
+# Compile binary
 
-WORKDIR /server
+FROM rust:latest AS builder
+
+RUN update-ca-certificates
+
+WORKDIR /app
+
 COPY . .
 
-RUN npm ci --only=production
+RUN cargo build --release
 
-CMD ["npm", "run", "serve"]
+
+# Run binary
+
+FROM gcr.io/distroless/cc-debian12 AS runtime
+
+ENV ADDRESS "0.0.0.0:3000"
+
+COPY --from=builder /app/target/release/static-web-server /
+
+CMD ["/static-web-server"]
