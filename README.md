@@ -1,7 +1,7 @@
 # Web Server
 
-* ### Put the files in /web
-* ### And the server will serve them at the port **3000**
+* Put the files in /web
+* And the server will serve them at the port **3000**
 
 ## Dockerfile Example:
 ```dockerfile
